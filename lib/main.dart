@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/todo_item_page.dart';
 import 'package:todo_app/todo_list_page.dart';
 
 void main() {
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TodoListPage(),
+      initialRoute: '/',
+      routes:  {
+        '/': (_) => TodoListPage(),
+        '/todoItem': (_) => TodoItemPage(),
+      },
     );
   }
 }

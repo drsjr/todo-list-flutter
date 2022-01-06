@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/todo_item_page.dart';
 
 class TodoListPage extends StatefulWidget {
   //const TodoListPage({ Key? key }) : super(key: key);
@@ -33,6 +34,9 @@ class _TodoListPageState extends State<TodoListPage> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(_tarefas[index]),
+                  onTap: () {
+                    openItemPage(context, _tarefas[index]);
+                  },
                   onLongPress: () {
                     removeItem(index);
                   },
@@ -92,6 +96,16 @@ class _TodoListPageState extends State<TodoListPage> {
   void removeItem(int index) {
     setState(() {
       _tarefas.removeAt(index);      
+    });
+  }
+
+  void openItemPage(BuildContext context, String todoItem) {
+    // Navigator.of(context).push(
+    //   MaterialPageRoute(
+    //     builder: (context) => TodoItemPage(todo))
+    // );
+    Navigator.of(context).pushNamed('/todoItem', arguments: todoItem).then((value) => {
+      print(value)
     });
   }
 }
