@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/custom_button_widget.dart';
+
 class TodoItemPage extends StatelessWidget {
   // final String itemText;
   // TodoItemPage(this.itemText);
@@ -10,14 +12,12 @@ class TodoItemPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            if (Navigator.of(context).canPop()) {
-              Navigator.of(context).pop("returnar argument");
-            }
-          },
-          child: Text(args),
-        )
+        child: CustomButtonWidget(
+          () {
+
+          }, 
+          args, 
+          false)
       ),
     );
   }

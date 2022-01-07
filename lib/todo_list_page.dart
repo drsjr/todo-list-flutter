@@ -52,6 +52,7 @@ class _TodoListPageState extends State<TodoListPage> {
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+
           FloatingActionButton(
             backgroundColor: Colors.blue[400],
             child: Icon(Icons.add),
@@ -61,15 +62,16 @@ class _TodoListPageState extends State<TodoListPage> {
               print(_tarefas.toString());
             },
           ),
-        FloatingActionButton(
-          backgroundColor: Colors.blue[400],
-          child: Icon(Icons.remove),
-          onPressed: () {
-            cleanList();
-            print(_textEditingController.text);
-            print(_tarefas.toString());
-          },
-        ),
+
+          FloatingActionButton(
+            backgroundColor: Colors.blue[400],
+            child: Icon(Icons.remove),
+            onPressed: () {
+              cleanList();
+              print(_textEditingController.text);
+              print(_tarefas.toString());
+            },
+          ),
         ],
       )
     );
