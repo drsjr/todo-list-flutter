@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/todo_item_page.dart';
-import 'package:todo_app/todo_list_page.dart';
+import 'package:todo_app/views/todo_item_page.dart';
+import 'package:todo_app/views/todo_list_page.dart';
 
 void main() {
   runApp(MyApp());
