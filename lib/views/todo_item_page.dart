@@ -17,7 +17,7 @@ class _TodoItemPageState extends State<TodoItemPage> {
   @override
   Widget build(BuildContext context) {
 
-    var args = ModalRoute.of(context).settings.arguments as String;
+    var args = ModalRoute.of(context)!.settings.arguments as String;
     print("build");
 
     return Scaffold(

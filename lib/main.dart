@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/views/login_page.dart';
+import 'package:todo_app/views/splash_page.dart';
 import 'package:todo_app/views/todo_item_page.dart';
 import 'package:todo_app/views/todo_list_page.dart';
 
@@ -16,9 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/splash',
       routes:  {
-        '/': (_) => TodoListPage(),
+        '/splash': (_) => SplashPage(),
+        '/login': (_) => LoginPage(),
+        '/todoList': (_) => TodoListPage(),
         '/todoItem': (_) => TodoItemPage(),
       },
     );
