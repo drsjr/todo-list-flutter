@@ -35,7 +35,7 @@ class CustomLoginButton extends StatelessWidget {
   void loginResult(bool value, BuildContext context) {
     if (value) {
       print('loginResult::Success');
-      Navigator.of(context).pushReplacementNamed('/todoList');
+      Navigator.of(context).pushReplacementNamed('/home');
     } else {
       print('loginResult::Failed');
       ScaffoldMessenger.of(context).showSnackBar(snackBarActionError());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/views/home_page.dart';
 import 'package:todo_app/views/login_page.dart';
 import 'package:todo_app/views/splash_page.dart';
 import 'package:todo_app/views/todo_item_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes:  {
         '/splash': (_) => SplashPage(),
         '/login': (_) => LoginPage(),
+        '/home': (_) => HomePage(),
         '/todoList': (_) => TodoListPage(),
         '/todoItem': (_) => TodoItemPage(),
       },

@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
             ),
 
             CustomTextFieldWidget(
-              onChanged: _controller.setLogin,
+              onChanged: _controller.setPassword,
               label: "Password",
               obscureText: true
             ),
